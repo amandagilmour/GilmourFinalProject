@@ -19,7 +19,34 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func switchView(group: Int) {
+        let nav = storyboard!.instantiateViewController(withIdentifier: "CategoryView") as! UINavigationController
+        let category = nav.viewControllers[0] as! CategoryViewController
+        category.cat = group
+        self.present(nav, animated: true, completion: nil)
+    }
 
+    
+    
+    @IBAction func shirtGroup(_ sender: UIButton) {
+        switchView(group: 0)
+    }
 
+    @IBAction func pantsGroup(_ sender: UIButton) {
+        switchView(group: 1)
+    }
+    
+    @IBAction func dressesGroup(_ sender: UIButton) {
+        switchView(group: 2)
+    }
+    
+    @IBAction func accessoriesGroup(_ sender: UIButton) {
+        switchView(group: 3)
+    }
+    
+    
+    
+    
 }
 
