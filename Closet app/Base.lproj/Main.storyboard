@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-qI-M6e">
-                                <rect key="frame" x="67" y="393" width="102" height="30"/>
+                                <rect key="frame" x="67" y="471" width="102" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Take Photo">
@@ -111,7 +111,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-xj-u6W">
-                                <rect key="frame" x="209" y="393" width="98" height="30"/>
+                                <rect key="frame" x="209" y="471" width="98" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Photo Library">
@@ -121,14 +121,6 @@
                                     <action selector="addFromPhotoLibrary:" destination="wOz-rG-fTq" eventType="touchUpInside" id="dDp-SN-rmW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1H-5i-Wt2">
-                                <rect key="frame" x="319" y="28" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <segue destination="O5n-Nz-18F" kind="unwind" unwindAction="unwindToCategoryViewControllerWithSender:" id="fRZ-oT-cho"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert Image Below:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boa-Ul-cqj">
                                 <rect key="frame" x="67" y="75" width="240" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -136,13 +128,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWY-9E-0zR">
-                                <rect key="frame" x="67" y="147" width="240" height="194"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWY-9E-0zR">
+                                <rect key="frame" x="67" y="147" width="240" height="256"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1H-5i-Wt2">
+                                <rect key="frame" x="17" y="630" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="O5n-Nz-18F" kind="unwind" unwindAction="unwindToCategoryViewControllerWithSender:" id="fRZ-oT-cho"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="save" id="484-Td-a1T"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="newImage" destination="cWY-9E-0zR" id="sJH-AD-UqZ"/>
                     </connections>
@@ -150,7 +154,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYo-fE-eH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="O5n-Nz-18F" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="945" y="131"/>
+            <point key="canvasLocation" x="944.79999999999995" y="130.88455772113943"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="vUu-nz-Haf">
@@ -180,18 +184,19 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="bIx-GC-BkG" customClass="CollectionViewCell" customModule="Closet_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="175"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x0Y-DD-QSz">
-                                                    <rect key="frame" x="8" y="-9" width="94" height="101"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x0Y-DD-QSz">
+                                                    <rect key="frame" x="8" y="-9" width="170" height="175"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <size key="customSize" width="170" height="175"/>
                                         <connections>
                                             <outlet property="savedImage" destination="x0Y-DD-QSz" id="gzX-tT-Try"/>
                                         </connections>
@@ -206,14 +211,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="lJ4-iK-QKo">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qzD-dD-GF1">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="qzD-dD-GF1">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="jVY-3S-s0k" id="0QT-k6-5Sf"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jqN-Za-GV6">
                             <connections>
-                                <segue destination="wOz-rG-fTq" kind="presentation" identifier="ToInsertImage" id="LiC-I1-5Sp"/>
+                                <segue destination="wOz-rG-fTq" kind="show" identifier="ToInsertImage" id="LiC-I1-5Sp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -225,6 +230,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RuA-TE-R2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2672.8000000000002" y="130.88455772113943"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="019-cN-fEU">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="JFi-fo-cb9" customClass="DetailViewController" customModule="Closet_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AZU-5R-d1x"/>
+                        <viewControllerLayoutGuide type="bottom" id="8FY-Uv-kry"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NsA-6y-e6y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxc-4C-N7n">
+                                <rect key="frame" x="119" y="500" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="khb-di-1iA" kind="unwind" unwindAction="unwindToDeleteWithSender:" id="ctX-rJ-LgT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wo-hw-odi">
+                                <rect key="frame" x="29" y="44" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="khb-di-1iA" kind="unwind" unwindAction="unwindFromDetailVCWithSender:" id="ZO1-NL-DsK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="Vxc-4C-N7n" id="9dY-iL-mQb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6z8-Ya-mUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="khb-di-1iA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1560.8" y="-638.2308845577212"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WE7-93-961">

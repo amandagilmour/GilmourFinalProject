@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func switchView(group: Int) {
+    func switchView(group: String) {
         let nav = storyboard!.instantiateViewController(withIdentifier: "CategoryView") as! UINavigationController
         let category = nav.viewControllers[0] as! CategoryViewController
         category.cat = group
@@ -30,19 +30,19 @@ class ViewController: UIViewController {
     
     
     @IBAction func shirtGroup(_ sender: UIButton) {
-        switchView(group: 0)
+        switchView(group: "Shirts")
     }
 
     @IBAction func pantsGroup(_ sender: UIButton) {
-        switchView(group: 1)
+        switchView(group: "Pants")
     }
     
     @IBAction func dressesGroup(_ sender: UIButton) {
-        switchView(group: 2)
+        switchView(group: "Dresses/Skirts")
     }
     
     @IBAction func accessoriesGroup(_ sender: UIButton) {
-        switchView(group: 3)
+        switchView(group: "Accessories")
     }
     
     

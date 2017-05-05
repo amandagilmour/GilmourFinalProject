@@ -17,6 +17,7 @@
 		5F3FD57E1EAA6BE50016077F /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3FD57D1EAA6BE50016077F /* CategoryViewController.swift */; };
 		5F93B7C71EAE57AA0053F4E3 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93B7C61EAE57AA0053F4E3 /* AddImageViewController.swift */; };
 		5F93B7C91EAEA15E0053F4E3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93B7C81EAEA15E0053F4E3 /* CollectionViewCell.swift */; };
+		5FFF426A1EB7A889004D11FA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFF42691EB7A889004D11FA /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5F3FD57D1EAA6BE50016077F /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		5F93B7C61EAE57AA0053F4E3 /* AddImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageViewController.swift; sourceTree = "<group>"; };
 		5F93B7C81EAEA15E0053F4E3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5FFF42691EB7A889004D11FA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5F3FD54F1EAA670B0016077F /* AppDelegate.swift */,
 				5F3FD5511EAA670B0016077F /* ViewController.swift */,
 				5F3FD5531EAA670B0016077F /* Main.storyboard */,
+				5FFF42691EB7A889004D11FA /* DetailViewController.swift */,
 				5F93B7C81EAEA15E0053F4E3 /* CollectionViewCell.swift */,
 				5F93B7C61EAE57AA0053F4E3 /* AddImageViewController.swift */,
 				5F3FD57D1EAA6BE50016077F /* CategoryViewController.swift */,
@@ -202,6 +205,7 @@
 				TargetAttributes = {
 					5F3FD54B1EAA670B0016077F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MA8KQ96X69;
 						ProvisioningStyle = Automatic;
 					};
 					5F3FD55F1EAA670B0016077F = {
@@ -271,6 +275,7 @@
 				5F93B7C91EAEA15E0053F4E3 /* CollectionViewCell.swift in Sources */,
 				5F3FD5521EAA670B0016077F /* ViewController.swift in Sources */,
 				5F3FD57E1EAA6BE50016077F /* CategoryViewController.swift in Sources */,
+				5FFF426A1EB7A889004D11FA /* DetailViewController.swift in Sources */,
 				5F93B7C71EAE57AA0053F4E3 /* AddImageViewController.swift in Sources */,
 				5F3FD5501EAA670B0016077F /* AppDelegate.swift in Sources */,
 			);
@@ -424,11 +429,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MA8KQ96X69;
 				INFOPLIST_FILE = "Closet app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gilmour.Closet-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -436,11 +444,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MA8KQ96X69;
 				INFOPLIST_FILE = "Closet app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gilmour.Closet-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
